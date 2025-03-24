@@ -9,7 +9,7 @@ const domains = [
             {
                 title: 'HTML Fundamentals',
                 content: 'HTML is the backbone of web development. Start with semantic elements, forms, and accessibility.',
-                //videoUrl: 'https://www.youtube.com/watch?v=qz0aGYrrlhU'
+                
                 videoUrl: 'https://www.youtube.com/watch?v=qz0aGYrrlhU'
             },
             {
@@ -22,7 +22,7 @@ const domains = [
                 content: 'Master core concepts like async/await, promises, and DOM manipulation.',
                 videoUrl: 'https://youtu.be/VlPiVmYuoqw?si=X_RI7NWYqs4rZzS'
             }
-          
+            
         ]
     },
     {
