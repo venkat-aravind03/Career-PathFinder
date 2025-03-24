@@ -20,7 +20,17 @@ const domains = [
             {
                 title: 'JavaScript Essentials',
                 content: 'Master core concepts like async/await, promises, and DOM manipulation.',
-                videoUrl: 'https://www.youtube.com/watch?v=W6NZfCO5SIk'
+                videoUrl: 'https://youtu.be/VlPiVmYuoqw?si=X_RI7NWYqs4rZzS'
+            }
+            {
+                title: 'React',
+                content: '"React.js: A powerful JavaScript library for building fast, interactive, and scalable user interfaces with reusable components.".',
+                videoUrl: 'https://youtu.be/CgkZ7MvWUAA?si=uF4UbV24DQMZ3bde'
+            }
+            {
+                title: 'Node JS',
+                content: 'Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to run JavaScript code outside the browser.',
+                videoUrl: 'https://youtu.be/Oe421EPjeBE?si=MNiOWUYe5YRTYH0C'
             }
         ]
     },
@@ -33,17 +43,17 @@ const domains = [
             {
                 title: 'Frontend Development',
                 content: 'Learn modern frontend frameworks and state management.',
-                videoUrl: 'https://www.youtube.com/watch?v=w7ejDZ8SWv8'
+                videoUrl: 'https://youtu.be/nu_pCVPKzTk?si=KEE3EOsd1z_j6nar'
             },
             {
                 title: 'Backend Development',
                 content: 'Master server-side programming and API development.',
-                videoUrl: 'https://www.youtube.com/watch?v=Oe421EPjeBE'
+                videoUrl: 'https://youtu.be/7fjOw8ApZ1I?si=spG2un2e28Ly0VqA'
             },
             {
                 title: 'Database Design',
                 content: 'Learn database modeling, SQL, and NoSQL databases.',
-                videoUrl: 'https://www.youtube.com/watch?v=HXV3zeQKqGY'
+                videoUrl: 'https://youtu.be/hlGoQC332VM?si=srS6FvxLOtOZ2Fcm'
             }
         ]
     },
