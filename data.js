@@ -22,7 +22,7 @@ const domains = [
                 content: 'Master core concepts like async/await, promises, and DOM manipulation.',
                 videoUrl: 'https://youtu.be/VlPiVmYuoqw?si=X_RI7NWYqs4rZzS'
             }
-            {
+          /*  {
                 title: 'React',
                 content: '"React.js: A powerful JavaScript library for building fast, interactive, and scalable user interfaces with reusable components.".',
                 videoUrl: 'https://youtu.be/CgkZ7MvWUAA?si=uF4UbV24DQMZ3bde'
@@ -31,7 +31,7 @@ const domains = [
                 title: 'Node JS',
                 content: 'Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to run JavaScript code outside the browser.',
                 videoUrl: 'https://youtu.be/Oe421EPjeBE?si=MNiOWUYe5YRTYH0C'
-            }
+            }*/
         ]
     },
     {
