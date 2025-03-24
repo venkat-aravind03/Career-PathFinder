@@ -12,15 +12,16 @@ function toggleAuthMode() {
     const toggleButton = document.querySelector('.left-section button');
 
     if (isSignUp) {
-        nameGroup.style.display = 'block';
-        authTitle.textContent = 'Create Account';
-        authButton.textContent = 'Sign Up';
-        toggleButton.textContent = 'Sign In Instead';
-    } else {
         nameGroup.style.display = 'none';
         authTitle.textContent = 'Sign In';
         authButton.textContent = 'Sign In';
         toggleButton.textContent = 'Create Account';
+    } else {
+       
+        nameGroup.style.display = 'block';
+        authTitle.textContent = 'Create Account';
+        authButton.textContent = 'Sign Up';
+        toggleButton.textContent = 'Sign In Instead';
     }
 }
 
@@ -82,6 +83,24 @@ function createDomainCard(domain) {
     const card = document.createElement('div');
     card.className = 'domain-card';
     
+    let notesHtml = '';
+    if (domain.notes) {
+        notesHtml = `
+            <div class="domain-notes">
+                <h4>Learning Resources:</h4>
+                ${domain.notes.map(note => `
+                    <div class="note-item">
+                        <h5>${note.title}</h5>
+                        <p>${note.content}</p>
+                        <a href="${note.videoUrl}" target="_blank" class="video-link">
+                            <i class="fas fa-play-circle"></i> Watch Tutorial
+                        </a>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+    
     card.innerHTML = `
         <div class="domain-icon">
             <i class="fas ${domain.icon}"></i>
@@ -94,9 +113,55 @@ function createDomainCard(domain) {
                 ${domain.roadmap.map(item => `<li>${item}</li>`).join('')}
             </ul>
         </div>
+        ${notesHtml}
     `;
+
+    // Add click event to show notes in a new page
+    card.addEventListener('click', () => {
+        if (domain.notes) {
+            showDomainNotes(domain);
+        }
+    });
     
     return card;
+}
+
+// Show domain notes in a new page
+function showDomainNotes(domain) {
+    const domainsSection = document.getElementById('domains-section');
+    const notesHtml = `
+        <div class="notes-page">
+            <div class="notes-header">
+                <button onclick="showDomainsGrid()" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Domains
+                </button>
+                <h2>${domain.title} Learning Resources</h2>
+            </div>
+            <div class="notes-container">
+                ${domain.notes.map(note => `
+                    <div class="note-card">
+                        <h3>${note.title}</h3>
+                        <p>${note.content}</p>
+                        <a href="${note.videoUrl}" target="_blank" class="video-link">
+                            <i class="fas fa-play-circle"></i> Watch Tutorial
+                        </a>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+    
+    domainsSection.innerHTML = notesHtml;
+}
+
+// Show domains grid
+function showDomainsGrid() {
+    const domainsSection = document.getElementById('domains-section');
+    domainsSection.innerHTML = '<div class="domains-grid" id="domains-grid"></div>';
+    const domainsGrid = document.getElementById('domains-grid');
+    domains.forEach(domain => {
+        domainsGrid.appendChild(createDomainCard(domain));
+    });
 }
 
 // Create company card
